@@ -1,7 +1,7 @@
 var React = require('react');
 var Thumbnail = require('./thumbnail');
 
-module.export = React.createClass({
+module.exports = React.createClass({
 render: function() {
   var list = this.props.thumbnailData.map(function(thumbnailProps){
     // passing all properties from thumbnail object
