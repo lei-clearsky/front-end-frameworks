@@ -5,12 +5,11 @@
 </head>
 <body>
 </body>
-
 <script type="text/jsx">
-  // Define a `class`
+  // Define a 'class'
   var Badge = React.createClass({
+    // must contain a render function and return jsx
     render: function() {
-
       return <button className="btn btn-primary" type="button">
         {this.props.title} <span className="badge">{this.props.number}</span>
       </button>
@@ -18,13 +17,13 @@
   });
 
   var options = {
-    title: 'Sent',
-    number: 12
+    title: 'Inbox',
+    number: 32
   };
 
-  // React, please render this class
+  // Create instance of this class and render this class
   var element = React.createElement(Badge, options);
 
-  // React, after you render this class, please place it in my body tag
+  // After render this class, place it into the body tag
   React.render(element, document.body);
 </script>

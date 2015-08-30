@@ -8,13 +8,14 @@
 <script type="text/jsx">
   // Define a 'class'
   var HelloWorld = React.createClass({
+    // must contain a render function and return jsx
     render: function() {
       return <div>
         Hellow World!
       </div>
     }
   });
-  // Create instance of this class and ender this class
+  // Create instance of this class and render this class
   var element = React.createElement(HelloWorld);
 
   // After render this class, place it into the body tag

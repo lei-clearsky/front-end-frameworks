@@ -5,11 +5,17 @@
 </head>
 <body>
   <div class="container">
+    <div class="row">
+      <div class="col-sm-5 target">
+      </div>
+    </div>
   </div>
 </body>
 
 <script type="text/jsx">
+  // Define a 'class'
   var Badge = React.createClass({
+    // must contain a render function and return jsx
     render: function() {
       return <button className="btn btn-primary" type="button">
         {this.props.title} <span className="badge">{this.props.number}</span>
@@ -19,29 +25,30 @@
 
   var Thumbnail = React.createClass({
     render: function() {
-      return <div className="col-sm-6 col-md-4">
-        <div className="thumbnail">
-          <img src={this.props.imageUrl} alt="..."></img>
-          <div className="caption">
-            <h3>{this.props.header}</h3>
-            <p>{this.props.description}</p>
-            <p>
-              <Badge title={this.props.title} number={this.props.number} />
-            </p>
-          </div>
+      return <div className="thumbnail">
+        <img src={this.props.imageUrl} />
+        <div className="caption">
+          <h3>{this.props.header}</h3>
+          <p>{this.props.description}</p>
+          <p>
+            <Badge title={this.props.title} number={this.props.number} />
+          </p>
         </div>
       </div>
     }
   });
 
   var options = {
-    title: 'Show Courses',
-    number: 12,
-    header: 'Learn React',
-    description: 'React is a fantastic new front end library for rendering web pages. React is a fantastic new front end library for rendering web pages.',
-    imageUrl: 'https://raw.githubusercontent.com/wiki/facebook/react/react-logo-1000-transparent.png'
+    title: 'See Tutorials',
+    number: 32,
+    header: 'React',
+    description: 'React is fantastic new library for making fast, dynamic pages. React is fantastic new library for making fast, dynamic pages.',
+    imageUrl: 'http://formatjs.io/img/react.svg'
   };
 
+  // Create instance of this class and render this class
   var element = React.createElement(Thumbnail, options);
-  React.render(element, document.querySelector('.container'));
+
+  // After render this class, place it into the body tag
+  React.render(element, document.querySelector('.target'));
 </script>
