@@ -8,6 +8,8 @@ export const VisibilityFilters = {
   SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
 
+// in Redux action creators are pure functions
+// they simply return an action
 export function addTodo(text) {
   return { type: ADD_TODO, text }
 }

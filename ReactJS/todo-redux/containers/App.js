@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 
 class App extends Component {
   render() {
+    // const dispatch = this.props.dispatch ???
     const { dispatch, visibleTodos, visibilityFilter } = this.props
     return (
       <div>

@@ -7,6 +7,8 @@ import todoApp from './reducers'
 
 const store = createStore(todoApp)
 
+console.log(store.getState())
+
 const rootElement = document.getElementById('root')
 render(
   <Provider store={store}>
@@ -14,3 +16,4 @@ render(
   </Provider>,
   rootElement
 )
+
